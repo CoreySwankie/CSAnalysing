@@ -83,28 +83,50 @@
                 xhttp.onreadystatechange = function () {
                     if (this.readyState == 4 && this.status == 200) {
                       // do something here
-                      var output = "<b>Data From path 1</b> </br>"; // title the test data output
-                      var jsonData = JSON.parse(xhttp.responseText);
-                      var jsonKeys = [];
+                      var output = "<b>Data From path ./data/test.json </b> </br>"; // title the test data output
+                      var data = JSON.parse(xhttp.responseText);
+                      var dataKeys = [];
 
-                      // get the different json key names and store in array
-                      Object.keys(jsonData).forEach(JsonSetupKeys);
-                      function JsonSetupKeys(item, index){
-                        jsonKeys.push(item);
+                      // get the different key names and store in array
+                      Object.keys(data).forEach(SetupDataKeys);
+                      function SetupDataKeys(item, index){
+                        // add the key name to the key array
+                        dataKeys.push(item);
                       }
 
                       // output the keys
-                      jsonKeys.forEach(JsonFE);
-                      function JsonFE(item, index){
-                        output += item + "</br>";
+                      dataKeys.forEach(FEDataKey);
+                      function FEDataKey(item, index){
+                        // output the key name
+                        output += item;
+
+                        if (Array.isArray(data[item])) {
+                          output += " is an array";
+                          // output the number of entries under that key
+                          output += " and has " + data[item].length + " entries";
+
+                          // now need to get all the entries of that key
+                          // from there can then get that entries keys
+
+                          // data[item].forEach(FEEntry);
+                          // function FEEntry(item1,index1){
+                          //   output += "</br>" + item1.RunTime;
+                          // }
+                        }
+
+                        // new line for the next key name output
+                        output += "</br>";
                       }
+
+
+
 
                       document.getElementById("jsonDisplay").innerHTML = output;
                     }
 
                   };
 
-                  xhttp.open("GET", "./data/Session_31OAY1PD43M50TSK1O82CE8RE8.json", true);
+                  xhttp.open("GET", "./data/test.json", true);
                   xhttp.send();
             </script>
 

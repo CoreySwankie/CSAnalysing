@@ -64,9 +64,58 @@
 
     <div class="col-sm-9">
         <div class="well">
-            <h4>All JSON Info Output</h4>
-            <p id="JSONDisplay"></p>
+            <h4>JSON File Paths</h4>
+            <p id="JSONPaths"></p>
 
+            <script type="text/javascript">
+            // get the json paths
+            $.ajax({
+                url: 'getJSONFilePaths.php',
+                success: function (response) {//response is value returned from php
+                    document.getElementById("JSONPaths").innerHTML = response;
+                }
+            });
+            </script>
+
+            <p id="jsonDisplay"> </p>
+            <script type="text/javascript">
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                      // do something here
+                      var output = "<b>Data From path 1</b> </br>"; // title the test data output
+                      var jsonData = JSON.parse(xhttp.responseText);
+                      var jsonKeys = [];
+
+                      // get the different json key names and store in array
+                      Object.keys(jsonData).forEach(JsonSetupKeys);
+                      function JsonSetupKeys(item, index){
+                        jsonKeys.push(item);
+                      }
+
+                      // output the keys
+                      jsonKeys.forEach(JsonFE);
+                      function JsonFE(item, index){
+                        output += item + "</br>";
+                      }
+
+                      document.getElementById("jsonDisplay").innerHTML = output;
+                    }
+
+                  };
+
+                  xhttp.open("GET", "./data/Session_31OAY1PD43M50TSK1O82CE8RE8.json", true);
+                  xhttp.send();
+            </script>
+
+
+        </div>
+
+      <div class="row">
+        <div class="col-sm-9">
+          <div class="well">
+            <h4>All Data</h4>
+            <p id="JSONDisplay"></p>
 
             <script type="text/javascript"> // script that returns all the data inside the json files
                 $.ajax({
@@ -77,14 +126,11 @@
                 });
             </script>
 
-        </div>
-      <div class="row">
-        <div class="col-sm-3">
-          <div class="well">
-            <h4>Users</h4>
-            <p>1 Million</p>
           </div>
         </div>
+      </div>
+
+      <div class = "row">
         <div class="col-sm-3">
           <div class="well">
             <h4>Pages</h4>
@@ -104,6 +150,7 @@
           </div>
         </div>
       </div>
+
       <div class="row">
         <div class="col-sm-4">
           <div class="well">

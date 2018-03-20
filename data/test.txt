@@ -1,12 +1,4 @@
 {
-"Event_ApplicationExit":[
-{
-"RunTime":"61.658",
-"SessionID":"31OAY1PD43M50TSK1O82CE8RE8",
-"UserID":"COREY-DESKTOP",
-"Time":"18/3/2018 01:54:59 AM"}
-]
-,
 "Event_LevelFinished":[
 {
 "FinalScore":"428",
@@ -16,7 +8,34 @@
 "Time":"18/3/2018 01:54:50 AM"}
 ]
 ,
+"Event_GameExit":[
+{
+"RunTime":"11.06718",
+"SessionID":"02O3YO5P5C1KM1S8E15E3D8ART",
+"UserID":"COREY-DESKTOP",
+"Time":"18/3/2018 01:55:47 AM"},
+{
+"RunTime":"61.658",
+"SessionID":"31OAY1PD43M50TSK1O82CE8RE8",
+"UserID":"COREY-DESKTOP",
+"Time":"18/3/2018 01:54:59 AM"}
+]
+,
 "Event_Pickup":[
+{
+"Location":"(30.5, 0.9, 185.3)",
+"PointsWorth":"14",
+"SessionID":"02O3YO5P5C1KM1S8E15E3D8ART",
+"UserID":"COREY-DESKTOP",
+"Time":"18/3/2018 01:55:43 AM"}
+,
+{
+"Location":"(57.6, 0.6, 354.9)",
+"PointsWorth":"34",
+"SessionID":"02O3YO5P5C1KM1S8E15E3D8ART",
+"UserID":"COREY-DESKTOP",
+"Time":"18/3/2018 01:55:46 AM"}
+,
 {
 "Location":"(75.4, 1.2, 117.8)",
 "PointsWorth":"38",
@@ -126,12 +145,23 @@
 "Event_LevelStart":[
 {
 "PlayerStartPosition":"(0.0, 0.6, 0.0)",
+"SessionID":"02O3YO5P5C1KM1S8E15E3D8ART",
+"UserID":"COREY-DESKTOP",
+"Time":"18/3/2018 01:55:36 AM"}
+,
+{
+"PlayerStartPosition":"(0.0, 0.6, 0.0)",
 "SessionID":"31OAY1PD43M50TSK1O82CE8RE8",
 "UserID":"COREY-DESKTOP",
 "Time":"18/3/2018 01:53:50 AM"}
 ]
 ,
 "Event_ApplicationStart":[
+{
+"SessionID":"02O3YO5P5C1KM1S8E15E3D8ART",
+"UserID":"COREY-DESKTOP",
+"Time":"18/3/2018 01:55:35 AM"}
+,
 {
 "SessionID":"31OAY1PD43M50TSK1O82CE8RE8",
 "UserID":"COREY-DESKTOP",

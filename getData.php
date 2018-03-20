@@ -21,18 +21,17 @@ foreach ($jsonFilePaths as $arrayPos => $filePath) {
 
 //////// return value code
 // set up iterator for the jsonfiles array
-$jsonIterator = new RecursiveIteratorIterator(
-    new RecursiveArrayIterator($jsonFiles),
-    RecursiveIteratorIterator::SELF_FIRST);
+$jsonIterator = new RecursiveIteratorIterator( new RecursiveArrayIterator($jsonFiles), RecursiveIteratorIterator::SELF_FIRST);
 
 // foreach json entry, $key is the json value name, $value is the value for that name
-foreach ($jsonIterator as $key => $value) {
-
+foreach ($jsonIterator as $key => $value){
 	if(is_array($value)) {
         echo "$key:<br/>"; // <br/> is a new line in html output
    } else {
         echo "$key : $value<br/>";
    }
-
 }
+
+
+
 ?>

@@ -28,45 +28,41 @@
   </style>
 </head>
 <body>
-<nav class="navbar navbar-inverse visible-xs">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">CS Analytics</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">All JSON Info Output</a></li>
-        <li><a href="#">Age</a></li>
-        <li><a href="#">Gender</a></li>
-        <li><a href="#">Geo</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
 
 <div class="container-fluid">
   <div class="row content">
     <div class="col-sm-3 sidenav hidden-xs">
       <h2>CS Analytics</h2>
       <ul class="nav nav-pills nav-stacked">
-        <li class="active"><a href="#section1">All JSON Info Output</a></li>
-        <li><a href="#section2">Age</a></li>
-        <li><a href="#section3">Gender</a></li>
-        <li><a href="#section3">Geo</a></li>
+        <li class="active"><a href="#home" onclick="ClearPage()">All JSON Info Output</a></li>
+        <li><a href="#first" onclick="SelectSpecificEventType()">Select Specific Event Type</a></li>
+        <li><a href="#getdata" onclick="CombineAndSaveData()">Combine and Save Data</a></li>
+        <li><a href="#organise" onclick="LoadAndOrganise()">Display Data</a></li>
+        <li><a href="#clear" onclick="ClearData()">Clear Data</a></li>
       </ul><br>
     </div>
     <br>
 
     <div class="col-sm-9">
         <div class="well">
-            <h4>JSON File Paths</h4>
-            <p id="JSONPaths"></p>
+            <h4>Process</h4>
+            <p id="testDisplay"> </p>
+        </div>
 
+      <div class="row">
+        <div class="col-sm-9">
+          <div class="well">
+            <h4>Data Display</h4>
+            <p id="JSONDisplay"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class = "row">
+        <div class="col-sm-5">
+          <div class="well">
+            <h4>All File Paths</h4>
+            <p id="JSONPaths"></p>
             <script type="text/javascript">
             // get the json paths
             $.ajax({
@@ -76,89 +72,11 @@
                 }
             });
             </script>
-
-            <p id="jsonDisplay"> </p>
-            <script type="text/javascript">
-                var xhttp = new XMLHttpRequest();
-                xhttp.onreadystatechange = function () {
-                    if (this.readyState == 4 && this.status == 200) {
-                      // do something here
-                      var output = "<b>Data From path ./data/test.json </b> </br>"; // title the test data output
-                      var data = JSON.parse(xhttp.responseText);
-                      var dataKeys = [];
-
-                      // get the different key names and store in array
-                      Object.keys(data).forEach(SetupDataKeys);
-                      function SetupDataKeys(item, index){
-                        // add the key name to the key array
-                        dataKeys.push(item);
-                      }
-
-                      // output the keys
-                      dataKeys.forEach(FEDataKey);
-                      function FEDataKey(item, index){
-                        // output the key name
-                        output += item;
-
-                        if (Array.isArray(data[item])) {
-                          output += " is an array";
-                          // output the number of entries under that key
-                          output += " and has " + data[item].length + " entries";
-
-                          // now need to get all the entries of that key
-                          // from there can then get that entries keys
-
-                          // data[item].forEach(FEEntry);
-                          // function FEEntry(item1,index1){
-                          //   output += "</br>" + item1.RunTime;
-                          // }
-                        }
-
-                        // new line for the next key name output
-                        output += "</br>";
-                      }
-
-
-
-
-                      document.getElementById("jsonDisplay").innerHTML = output;
-                    }
-
-                  };
-
-                  xhttp.open("GET", "./data/test.json", true);
-                  xhttp.send();
-            </script>
-
-
-        </div>
-
-      <div class="row">
-        <div class="col-sm-9">
-          <div class="well">
-            <h4>All Data</h4>
-            <p id="JSONDisplay"></p>
-
-            <script type="text/javascript"> // script that returns all the data inside the json files
-                $.ajax({
-                    url: 'getData.php',
-                    success: function (response) {//response is value returned from php
-                        document.getElementById("JSONDisplay").innerHTML = response;
-                    }
-                });
-            </script>
-
           </div>
         </div>
-      </div>
 
-      <div class = "row">
-        <div class="col-sm-3">
-          <div class="well">
-            <h4>Pages</h4>
-            <p>100 Million</p>
-          </div>
-        </div>
+
+        <!-- unused boxes
         <div class="col-sm-3">
           <div class="well">
             <h4>Sessions</h4>
@@ -171,8 +89,10 @@
             <p>30%</p>
           </div>
         </div>
+      -->
       </div>
 
+      <!-- unused row
       <div class="row">
         <div class="col-sm-4">
           <div class="well">
@@ -196,6 +116,8 @@
           </div>
         </div>
       </div>
+      -->
+      <!-- unused row
       <div class="row">
         <div class="col-sm-8">
           <div class="well">
@@ -208,9 +130,164 @@
           </div>
         </div>
       </div>
+      -->
+
     </div>
   </div>
 </div>
 
 </body>
+
+<script>
+
+  function SelectSpecificEventType(){
+    $.ajax({
+        url: 'GetCombinedDataForDisplayManipulation.php',
+        success: function (response) {//response is value returned from php
+            //document.getElementById("JSONDisplay").innerHTML = response; // output the response, filling the text box with all the json data
+            var testDisplayText = "Displaying data from './saved/combinedFile.json'<br/>";
+            testDisplayText += "<b>Select an event to see all data of that event type.</b><br/>";
+            document.getElementById("testDisplay").innerHTML = testDisplayText;
+
+            // parse the responce so we can work with the json data
+            var data = JSON.parse(response);
+            var dataKeys = [];
+
+            // get the different key names and store in array
+            Object.keys(data).forEach(ForEachGetDataKeys);
+            function ForEachGetDataKeys(item, index){
+              // add the key name to the key array
+              dataKeys.push(item);
+            }
+
+            // now have all the keys so create some buttons for the event names
+            // these buttons will later bring up all the data that relates to that event
+            // loop through all the datakeys and create a button for each one.
+            dataKeys.forEach(ForEachCreateButton);
+            function ForEachCreateButton(item, index){
+              CreateButtonForEvent(item);
+            }
+
+            // creates a button with the desired event name
+            function CreateButtonForEvent(eventName){
+              // create a new button
+              var newButton = document.createElement("BUTTON");
+              var newButtonText = document.createTextNode(eventName);
+              // give the button an id incase we need to access via id at any point
+              newButton.id = eventName+"_button";
+              // append the text to the button
+              newButton.appendChild(newButtonText);
+              // append the button to the list of buttons
+              document.getElementById("testDisplay").appendChild(newButton);
+
+              // add an event listener for clicking on the button to display the data for that event type
+              newButton.addEventListener("click", function(){DisplayDataFromEvent(eventName);});
+            }
+
+            function DisplayDataFromEvent(eventName){
+              //var output = "Button Pressed: " + eventName; // test that the button that is pressed is working correctly, returning that it has been pressed and what button it is
+
+              // fill out the display box with all the data for that event
+              var output = "";
+
+              // Get the data that relates to that event name
+              var eventData = data[eventName];
+
+              // get the keys for that events data
+              var eventKeys = [];
+
+              //output += eventData[1].RunTime + "<br/>"; // test display for getting the runtime of 1 event to check that its actually storing that data
+
+
+              // get the different event data key names and store in array
+              eventData.forEach(ForEachGetEventKeys);
+              function ForEachGetEventKeys(item, index){
+                // add the key name to the event data key array
+                // if its an object, we need to go deeper so call the function again
+                if (typeof item === "object" ) {
+                  //output += "need to go deeper <br/>"; // debug output
+                  Object.keys(item).forEach(ForEachGetEventKeys);
+                }
+                else { // not an object so add to the event key to the list
+                  // check if already in the Array, if it doesnt add it to the array
+                  if (!eventKeys.includes(item)) {
+                    eventKeys.push(item);
+                    //output += item + " has been added to the event keys<br/>"; // debug output
+                  }
+                }
+              }
+
+              // output the number of entries like a title
+              output += "<b>"+ eventName + " has " + eventData.length + " entries</b><br/>";
+              // output the entries
+              // loop through all the event data entries
+              for (var i = 0; i < eventData.length; i++) {
+
+                // output the entry number
+                output += "<i>" + "Entry " + i + "</i><br/>";
+
+                // loop through all the event keys and output the data for them
+                for (var j = 0; j < eventKeys.length; j++) {
+
+                  // output the name of the key
+                  output += "&nbsp" + eventKeys[j] + " : ";
+                  // add the value
+                  output += eventData[i][eventKeys[j]];
+                  // add a new line before moving on
+                  output += "<br/>";
+                }
+
+              }
+
+
+
+              document.getElementById("JSONDisplay").innerHTML = output;
+            }
+
+        },
+        error: function(){
+          document.getElementById("testDisplay").innerHTML = "failed to display data from './saved/combinedFile.json'<br/>";
+        }
+    });
+  }
+
+  function CombineAndSaveData(){
+    $.ajax({
+        url: 'CombineAndSaveAllJSONFiles.php',
+        success: function (response) {//response is value returned from php
+            document.getElementById("JSONDisplay").innerHTML = response;
+            document.getElementById("testDisplay").innerHTML = "Combine and Save Complete<br/>";
+        },
+        error: function(){
+          document.getElementById("testDisplay").innerHTML = "failed to Combine and Save Data<br/>";
+        }
+    });
+  }
+
+  function LoadAndOrganise(){
+    $.ajax({
+        url: 'SortJSONForDisplay.php',
+        success: function (response) {//response is value returned from php
+            document.getElementById("JSONDisplay").innerHTML = response;
+            document.getElementById("testDisplay").innerHTML = "All data loaded and displayed<br/>"
+        },
+        error: function(){
+          document.getElementById("testDisplay").innerHTML = "failed to load data from './saved/combinedFile.json'<br/>";
+        }
+    });
+  }
+
+  function ClearData(){
+    document.getElementById("JSONDisplay").innerHTML = "";
+    document.getElementById("testDisplay").innerHTML = "data cleared";
+  }
+
+  function ClearPage(){
+    document.getElementById("JSONDisplay").innerHTML = "";
+    document.getElementById("testDisplay").innerHTML = "";
+    document.getElementById("testDisplay").innerHTML = "";
+  }
+
+</script>
+
 </html>

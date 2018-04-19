@@ -35,25 +35,32 @@
       <h2>CS Analytics</h2>
       <ul class="nav nav-pills nav-stacked">
         <li class="active"><a href="#home" onclick="ClearPage()">All JSON Info Output</a></li>
-        <li><a href="#first" onclick="SelectSpecificEventType()">Select Specific Event Type</a></li>
         <li><a href="#getdata" onclick="CombineAndSaveData()">Combine and Save Data</a></li>
         <li><a href="#organise" onclick="LoadAndOrganise()">Display Data</a></li>
-        <li><a href="#clear" onclick="ClearData()">Clear Data</a></li>
+        <li><a href="#first" onclick="SelectSpecificEventType()">Select Specific Event Type</a></li>
+        <li><a href="#clear" onclick="ClearData()">Clear Data Display</a></li>
       </ul><br>
     </div>
     <br>
 
     <div class="col-sm-9">
         <div class="well">
-            <h4>Process</h4>
+            <h4>Process {This Tool is still a prototype}</h4>
             <p id="testDisplay"> </p>
         </div>
 
       <div class="row">
-        <div class="col-sm-9">
+        <div class="col-sm-7">
           <div class="well">
             <h4>Data Display</h4>
             <p id="JSONDisplay"></p>
+          </div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="well">
+            <h4>Sort by</h4>
+            <p id="SortButtons"></p>
           </div>
         </div>
       </div>
@@ -148,6 +155,7 @@
             var testDisplayText = "Displaying data from './saved/combinedFile.json'<br/>";
             testDisplayText += "<b>Select an event to see all data of that event type.</b><br/>";
             document.getElementById("testDisplay").innerHTML = testDisplayText;
+            document.getElementById("JSONDisplay").innerHTML = ""; // clear the json display
 
             // parse the responce so we can work with the json data
             var data = JSON.parse(response);
@@ -184,8 +192,11 @@
               newButton.addEventListener("click", function(){DisplayDataFromEvent(eventName);});
             }
 
+            // create an array of all the event data buttons
+            var eventDataButtons = [];
+
             function DisplayDataFromEvent(eventName){
-              //var output = "Button Pressed: " + eventName; // test that the button that is pressed is working correctly, returning that it has been pressed and what button it is
+              //var output = "Button Pressed: " + eventName; // test that the button that is pressed is working correctly, returning that it has been pressed and what button it
 
               // fill out the display box with all the data for that event
               var output = "";
@@ -217,6 +228,16 @@
                 }
               }
 
+              // clear all the event data buttons
+              if (eventDataButtons.length > 0) {
+                eventDataButtons.forEach(ClearAllButtons);
+                function ClearAllButtons(item, index){
+                  var deleteElem = document.getElementById(item.id);
+                  deleteElem.parentNode.removeChild(deleteElem);
+                }
+              }
+              //empty the array of data buttons
+              eventDataButtons = [];
               // output the number of entries like a title
               output += "<b>"+ eventName + " has " + eventData.length + " entries</b><br/>";
               // output the entries
@@ -240,13 +261,100 @@
               }
 
 
+              // create a new set of buttons for the different data in the event
+              eventKeys.forEach(ForEachEventDataKeyCreateButton);
+              function ForEachEventDataKeyCreateButton(item, index){
+                CreateButtonForDataSort(item);
+              }
 
+              function CreateButtonForDataSort(dataName){
+                // create a new button
+                var newButton = document.createElement("BUTTON");
+                var newButtonText = document.createTextNode(dataName);
+                // give the button an id incase we need to access via id at any point
+                newButton.id = dataName+"_button";
+                // append the text to the button
+                newButton.appendChild(newButtonText);
+                // append the button to the list of buttons
+                document.getElementById("SortButtons").appendChild(newButton);
+
+                eventDataButtons.push(newButton);
+                // add an event listener for clicking on the button to display the data for that event type
+                newButton.addEventListener("click", function(){SortDataByEventDataKey(dataName);});
+              }
+
+              // button calls this and then sorts the data for this event
+              function SortDataByEventDataKey(dataName){
+
+                // clear the previously displayed data
+                output = "";
+                // add a sorted title
+                output += "<b>" + "Sorting All " + eventName + " data by " + dataName + "</b><br/>";
+
+
+                function SortArrayOfObjects(key, order='asc'){
+                  return function(a,b){
+                    if(!a.hasOwnProperty(key) || !b.hasOwnProperty(key)){
+                      return 0;
+                    }
+
+                    const varA = (typeof a[key] === 'string') ? a[key].toUpperCase() : a[key];
+                    const varB = (typeof b[key] === 'string') ? b[key].toUpperCase() : b[key];
+
+                    let comparison = 0;
+                    if (varA > varB) {
+                      comparison = 1;
+                    }
+                    else if( varA < varB){
+                      comparison = -1;
+                    }
+                    return ((order=='desc') ? (comparison * -1) : comparison);
+                  };
+
+                }
+
+                //create a copy of the event data so its not adjusted by
+                var dataToSort = [];
+                for (var i = 0; i < eventData.length; i++) {
+                  dataToSort.push(eventData[i]);
+                }
+
+                // sort ascending
+                dataToSort.sort(SortArrayOfObjects(dataName));
+                // sort descending
+                //dataToSort.sort(SortArrayOfObjects(dataName, 'desc'));
+
+                // output all the data
+                for (var i = 0; i < dataToSort.length; i++) {
+
+                  // output the entry number
+                  output += "<i>" + "Sorted by " + dataName + " Entry " + i + "</i><br/>";
+
+                  // loop through all the event keys and output the data for them
+                  for (var j = 0; j < eventKeys.length; j++) {
+
+                    // output the name of the key
+                    output += "&nbsp" + eventKeys[j] + " : ";
+                    // add the value
+                    output += dataToSort[i][eventKeys[j]];
+                    // add a new line before moving on
+                    output += "<br/>";
+                  }
+
+                }
+
+
+                // output the data inside sorted event the event
+                document.getElementById("JSONDisplay").innerHTML = output;
+              }
+
+              // output the data inside the event
               document.getElementById("JSONDisplay").innerHTML = output;
             }
 
         },
         error: function(){
-          document.getElementById("testDisplay").innerHTML = "failed to display data from './saved/combinedFile.json'<br/>";
+          document.getElementById("testDisplay").innerHTML = "failed to retrieve data from './saved/combinedFile.json'<br/>";
         }
     });
   }
@@ -280,12 +388,13 @@
   function ClearData(){
     document.getElementById("JSONDisplay").innerHTML = "";
     document.getElementById("testDisplay").innerHTML = "data cleared";
+    document.getElementById("SortButtons").innerHTML = "";
   }
 
   function ClearPage(){
     document.getElementById("JSONDisplay").innerHTML = "";
     document.getElementById("testDisplay").innerHTML = "";
-    document.getElementById("testDisplay").innerHTML = "";
+    document.getElementById("SortButtons").innerHTML = "";
   }
 
 </script>

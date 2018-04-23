@@ -661,9 +661,9 @@
         document.getElementById("GraphDisplay").innerHTML = titleText;
 
           // draw pie graph
-          var w = document.getElementById("GraphDisplay").offsetWidth / 1.5;
-          var h = document.getElementById("GraphDisplay").offsetWidth / 1.5;
-          var r = w/2; // using the width since it changes with the size of the window
+          var w = document.getElementById("GraphDisplay").offsetWidth;
+          var h = document.getElementById("GraphDisplay").offsetWidth / 1.2;
+          var r = h/2; // using the width since it changes with the size of the window
 
           var colour = d3.scale.category20(); // will give us colours from d3s scale library
 

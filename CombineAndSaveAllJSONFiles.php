@@ -13,7 +13,9 @@ foreach ($jsonFilePaths as $arrayPos => $filePath) {
 
   // get the file contents of the specified path
   $jsonFileContents = file_get_contents($filePath);
-
+  // // check how big the file is
+  // $jsonFileSize = strlen($jsonFileContents);
+  // echo "$jsonFileSize<br/>";
   // decode the jsonfile
   $jsonFile = json_decode($jsonFileContents, true);
 
@@ -24,13 +26,15 @@ foreach ($jsonFilePaths as $arrayPos => $filePath) {
 // set up iterator for the jsonfiles array
 $jsonIterator = new RecursiveIteratorIterator( new RecursiveArrayIterator($jsonFiles), RecursiveIteratorIterator::SELF_FIRST);
 
+
 // get all the event names in all the files loaded
 //echo "<b>Start getting event names</b> <br/>";  // test echo output
 // foreach json entry, $key is the json value name, $value is the value for that name
 // store the json array names in an array
-$eventNames = array();
+//$eventNames = SplFixedArray($jsonFileSize);
 
 foreach ($jsonIterator as $key => $value){
+  //echo "looping again!<br/>"; // test that it is going through the array values
     // check if the value is an array
     if(is_array($value)) {
       // check if already in the event names array, if not add it

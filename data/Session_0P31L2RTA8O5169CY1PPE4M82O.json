@@ -1,0 +1,509 @@
+{
+"Event_ApplicationExit":[
+{
+"RunTime":37.88337,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:56 PM"}
+]
+,
+"Event_DoctorUnassign":[
+{
+"DoctorName":"Doctor Julianne Anthony",
+"CurrentNumberOfDoctors":10,
+"UnassignedFrom":"Examination Room",
+"UnassignedRoomCurrentStaff":2,
+"UnassignedRoomRequiredStaff":2,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:41 PM"}
+]
+,
+"Event_DoctorAssign":[
+{
+"DoctorName":"Doctor Hayley Stafford",
+"CurrentNumberOfDoctors":10,
+"AssignedTo":"Examination Room",
+"AssignedRoomCurrentStaff":1,
+"AssignedRoomRequiredStaff":2,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:28 PM"}
+,
+{
+"DoctorName":"Doctor Kareem Bowers",
+"CurrentNumberOfDoctors":10,
+"AssignedTo":"Examination Room",
+"AssignedRoomCurrentStaff":2,
+"AssignedRoomRequiredStaff":2,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:28 PM"}
+,
+{
+"DoctorName":"Doctor Julianne Anthony",
+"CurrentNumberOfDoctors":10,
+"AssignedTo":"Examination Room",
+"AssignedRoomCurrentStaff":3,
+"AssignedRoomRequiredStaff":2,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:39 PM"}
+,
+{
+"DoctorName":"Doctor Julianne Anthony",
+"CurrentNumberOfDoctors":10,
+"AssignedTo":"Ward",
+"AssignedRoomCurrentStaff":1,
+"AssignedRoomRequiredStaff":2,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:41 PM"}
+,
+{
+"DoctorName":"Doctor Zeke Padilla",
+"CurrentNumberOfDoctors":10,
+"AssignedTo":"Ward",
+"AssignedRoomCurrentStaff":2,
+"AssignedRoomRequiredStaff":2,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:44 PM"}
+]
+,
+"Event_PatientSpawn":[
+{
+"PatientName":"Harmony Haynes",
+"SpawnLocation":"(45.0, 0.0, 30.0)",
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:13 PM"}
+,
+{
+"PatientName":"Paityn Alvarez",
+"SpawnLocation":"(45.0, 0.0, 30.0)",
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:32 PM"}
+]
+,
+"Event_MoneyIncrease":[
+{
+"CurrentMoney":84000,
+"MoneyBefore":83900,
+"MoneyAdded":100,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:13 PM"}
+,
+{
+"CurrentMoney":83900,
+"MoneyBefore":83800,
+"MoneyAdded":100,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:32 PM"}
+]
+,
+"Event_DoctorSpawn":[
+{
+"DoctorName":"Doctor Hayley Stafford",
+"SpawnLocation":"(44.0, 0.0, 30.0)",
+"CurrentNumberOfDoctors":1,
+"DoctorCost":100,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:08 PM"}
+,
+{
+"DoctorName":"Doctor Kareem Bowers",
+"SpawnLocation":"(45.0, 0.0, 29.0)",
+"CurrentNumberOfDoctors":2,
+"DoctorCost":100,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:08 PM"}
+,
+{
+"DoctorName":"Doctor Zeke Padilla",
+"SpawnLocation":"(45.0, 0.0, 29.0)",
+"CurrentNumberOfDoctors":3,
+"DoctorCost":100,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:09 PM"}
+,
+{
+"DoctorName":"Doctor Drake Miller",
+"SpawnLocation":"(44.0, 0.0, 29.0)",
+"CurrentNumberOfDoctors":4,
+"DoctorCost":100,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:09 PM"}
+,
+{
+"DoctorName":"Doctor Raelyn Terrell",
+"SpawnLocation":"(44.0, 0.0, 30.0)",
+"CurrentNumberOfDoctors":5,
+"DoctorCost":100,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:09 PM"}
+,
+{
+"DoctorName":"Doctor Kalani Owens",
+"SpawnLocation":"(44.0, 0.0, 30.0)",
+"CurrentNumberOfDoctors":6,
+"DoctorCost":100,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:09 PM"}
+,
+{
+"DoctorName":"Doctor Rhys Snider",
+"SpawnLocation":"(45.0, 0.0, 29.0)",
+"CurrentNumberOfDoctors":7,
+"DoctorCost":100,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:09 PM"}
+,
+{
+"DoctorName":"Doctor Julianne Anthony",
+"SpawnLocation":"(45.0, 0.0, 30.0)",
+"CurrentNumberOfDoctors":8,
+"DoctorCost":100,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:09 PM"}
+,
+{
+"DoctorName":"Doctor Dane Gilbert",
+"SpawnLocation":"(45.0, 0.0, 29.0)",
+"CurrentNumberOfDoctors":9,
+"DoctorCost":100,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:09 PM"}
+,
+{
+"DoctorName":"Doctor Ace Medina",
+"SpawnLocation":"(45.0, 0.0, 30.0)",
+"CurrentNumberOfDoctors":10,
+"DoctorCost":100,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:10 PM"}
+]
+,
+"Event_MoneyRemove":[
+{
+"CurrentMoney":84900,
+"MoneyBefore":85000,
+"MoneyRemoved":100,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:06 PM"}
+,
+{
+"CurrentMoney":84800,
+"MoneyBefore":84900,
+"MoneyRemoved":100,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:08 PM"}
+,
+{
+"CurrentMoney":84700,
+"MoneyBefore":84800,
+"MoneyRemoved":100,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:08 PM"}
+,
+{
+"CurrentMoney":84600,
+"MoneyBefore":84700,
+"MoneyRemoved":100,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:09 PM"}
+,
+{
+"CurrentMoney":84500,
+"MoneyBefore":84600,
+"MoneyRemoved":100,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:09 PM"}
+,
+{
+"CurrentMoney":84400,
+"MoneyBefore":84500,
+"MoneyRemoved":100,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:09 PM"}
+,
+{
+"CurrentMoney":84300,
+"MoneyBefore":84400,
+"MoneyRemoved":100,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:09 PM"}
+,
+{
+"CurrentMoney":84200,
+"MoneyBefore":84300,
+"MoneyRemoved":100,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:09 PM"}
+,
+{
+"CurrentMoney":84100,
+"MoneyBefore":84200,
+"MoneyRemoved":100,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:09 PM"}
+,
+{
+"CurrentMoney":84000,
+"MoneyBefore":84100,
+"MoneyRemoved":100,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:09 PM"}
+,
+{
+"CurrentMoney":83900,
+"MoneyBefore":84000,
+"MoneyRemoved":100,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:10 PM"}
+,
+{
+"CurrentMoney":83800,
+"MoneyBefore":84000,
+"MoneyRemoved":200,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:17 PM"}
+]
+,
+"Event_RoomBuildSelection":[
+{
+"RoomName":"Examination",
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:05 PM"}
+,
+{
+"RoomName":"Ward",
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:16 PM"}
+]
+,
+"Event_RoomBuildPlaced":[
+{
+"RoomName":"Reception",
+"Position":"(45.0, 0.0, 30.0)",
+"Rotation":"(0.0, 0.0, 0.0)",
+"Cost":0,
+"Upkeep":0,
+"DoctorsNeed":0,
+"BuildTime":0,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:03 PM"}
+,
+{
+"RoomName":"Examination",
+"Position":"(60.0, 0.0, 0.0)",
+"Rotation":"(0.0, 0.0, 0.0)",
+"Cost":100,
+"Upkeep":200,
+"DoctorsNeed":2,
+"BuildTime":11,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:06 PM"}
+,
+{
+"RoomName":"Ward",
+"Position":"(0.0, 0.0, 15.0)",
+"Rotation":"(0.0, 0.0, 0.0)",
+"Cost":200,
+"Upkeep":150,
+"DoctorsNeed":2,
+"BuildTime":8,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:17 PM"}
+]
+,
+"Event_GameStateChange":[
+{
+"PreviousState":"ReceptionSetup",
+"CurrentState":"Playing",
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:03 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:04 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:05 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:07 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:11 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:14 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:16 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:27 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:29 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:38 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:42 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:43 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:44 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:47 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:50 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:52 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:54 PM"}
+]
+,
+"Event_RoomBuildComplete":[
+{
+"RoomName":"Reception",
+"Position":"(45.0, 0.0, 30.0)",
+"Rotation":"(0.0, 0.0, 0.0)",
+"Cost":0,
+"Upkeep":0,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:03 PM"}
+,
+{
+"RoomName":"Examination Room",
+"Position":"(60.0, 0.0, 0.0)",
+"Rotation":"(0.0, 0.0, 0.0)",
+"Cost":100,
+"Upkeep":200,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:22 PM"}
+,
+{
+"RoomName":"Ward",
+"Position":"(0.0, 0.0, 15.0)",
+"Rotation":"(0.0, 0.0, 0.0)",
+"Cost":200,
+"Upkeep":150,
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:39:25 PM"}
+]
+,
+"Event_ApplicationStart":[
+{
+"SessionID":"0P31L2RTA8O5169CY1PPE4M82O",
+"UserID":"COREYLAPTOP",
+"Time":"19/4/2018 12:38:56 PM"}
+]
+}

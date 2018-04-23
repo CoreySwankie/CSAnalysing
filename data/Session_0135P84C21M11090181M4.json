@@ -1,0 +1,2090 @@
+{
+"Event_ApplicationExit":[
+{
+"RunTime":367.5381,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:14:49 PM"}
+]
+,
+"Event_SymptomCleared":[
+{
+"PatientName":"Gilbert Mills",
+"SymptomName":"Nausea",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:09:09 PM"}
+,
+{
+"PatientName":"Gilbert Mills",
+"SymptomName":"Diarrhoea",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:11:39 PM"}
+,
+{
+"PatientName":"Gilbert Mills",
+"SymptomName":"Congestion",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:14:41 PM"}
+,
+{
+"PatientName":"Kyrie Kidd",
+"SymptomName":"Hair Thining",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:14:41 PM"}
+]
+,
+"Event_PatientSetToICU":[
+{
+"PatientName":"Alisha Alexander",
+"PatientHealth":94,
+"NumberOfKnownSymptoms":0,
+"NumberOfCuredSymptoms":0,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:08:54 PM"}
+]
+,
+"Event_ExaminationQuestionAsked":[
+{
+"QuestionAsked":"Empty Question",
+"RevealSymptomOrNot":true,
+"PatientQuestionIsFor":"Gilbert Mills",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:06:42 PM"}
+,
+{
+"QuestionAsked":"Empty Question",
+"RevealSymptomOrNot":true,
+"PatientQuestionIsFor":"Gilbert Mills",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:09:22 PM"}
+,
+{
+"QuestionAsked":"Empty Question",
+"RevealSymptomOrNot":true,
+"PatientQuestionIsFor":"Gilbert Mills",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:10:32 PM"}
+,
+{
+"QuestionAsked":"Empty Question",
+"RevealSymptomOrNot":true,
+"PatientQuestionIsFor":"Gilbert Mills",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:11:17 PM"}
+,
+{
+"QuestionAsked":"Empty Question",
+"RevealSymptomOrNot":true,
+"PatientQuestionIsFor":"Kyrie Kidd",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:13:20 PM"}
+,
+{
+"QuestionAsked":"Empty Question",
+"RevealSymptomOrNot":true,
+"PatientQuestionIsFor":"Scott McCaig",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:14:02 PM"}
+]
+,
+"Event_DoctorAssign":[
+{
+"DoctorName":"Doctor Nina Flynn",
+"CurrentNumberOfDoctors":2,
+"AssignedTo":"Examination Room",
+"AssignedRoomCurrentStaff":1,
+"AssignedRoomRequiredStaff":2,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:06:34 PM"}
+,
+{
+"DoctorName":"Doctor Winston Williamson",
+"CurrentNumberOfDoctors":2,
+"AssignedTo":"Examination Room",
+"AssignedRoomCurrentStaff":2,
+"AssignedRoomRequiredStaff":2,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:06:37 PM"}
+,
+{
+"DoctorName":"Doctor Rayden Morton",
+"CurrentNumberOfDoctors":4,
+"AssignedTo":"Ward",
+"AssignedRoomCurrentStaff":1,
+"AssignedRoomRequiredStaff":2,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:20 PM"}
+,
+{
+"DoctorName":"Doctor Douglas Cross",
+"CurrentNumberOfDoctors":4,
+"AssignedTo":"Ward",
+"AssignedRoomCurrentStaff":2,
+"AssignedRoomRequiredStaff":2,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:29 PM"}
+,
+{
+"DoctorName":"Doctor Eugene Potts",
+"CurrentNumberOfDoctors":5,
+"AssignedTo":"Laboratory",
+"AssignedRoomCurrentStaff":1,
+"AssignedRoomRequiredStaff":1,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:41 PM"}
+,
+{
+"DoctorName":"Doctor Jaelynn Mathis",
+"CurrentNumberOfDoctors":6,
+"AssignedTo":"Intensive Care Unit",
+"AssignedRoomCurrentStaff":1,
+"AssignedRoomRequiredStaff":2,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:08:06 PM"}
+,
+{
+"DoctorName":"Doctor Kaiden Peck",
+"CurrentNumberOfDoctors":7,
+"AssignedTo":"Ward",
+"AssignedRoomCurrentStaff":1,
+"AssignedRoomRequiredStaff":2,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:09:07 PM"}
+,
+{
+"DoctorName":"Doctor Talon Branch",
+"CurrentNumberOfDoctors":9,
+"AssignedTo":"Ward",
+"AssignedRoomCurrentStaff":2,
+"AssignedRoomRequiredStaff":2,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:10:08 PM"}
+,
+{
+"DoctorName":"Doctor Royal Saunders",
+"CurrentNumberOfDoctors":9,
+"AssignedTo":"Intensive Care Unit",
+"AssignedRoomCurrentStaff":2,
+"AssignedRoomRequiredStaff":2,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:10:15 PM"}
+,
+{
+"DoctorName":"Doctor Jamari Allen",
+"CurrentNumberOfDoctors":10,
+"AssignedTo":"Laboratory",
+"AssignedRoomCurrentStaff":1,
+"AssignedRoomRequiredStaff":1,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:12:56 PM"}
+,
+{
+"DoctorName":"Doctor Elian Kirkland",
+"CurrentNumberOfDoctors":12,
+"AssignedTo":"Examination Room",
+"AssignedRoomCurrentStaff":1,
+"AssignedRoomRequiredStaff":2,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:13:48 PM"}
+,
+{
+"DoctorName":"Doctor Alma Howe",
+"CurrentNumberOfDoctors":12,
+"AssignedTo":"Examination Room",
+"AssignedRoomCurrentStaff":2,
+"AssignedRoomRequiredStaff":2,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:13:56 PM"}
+]
+,
+"Event_DoctorSpawn":[
+{
+"DoctorName":"Doctor Nina Flynn",
+"SpawnLocation":"(29.0, 0.0, -1.0)",
+"CurrentNumberOfDoctors":1,
+"DoctorCost":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:05:33 PM"}
+,
+{
+"DoctorName":"Doctor Winston Williamson",
+"SpawnLocation":"(30.0, 0.0, -1.0)",
+"CurrentNumberOfDoctors":2,
+"DoctorCost":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:05:34 PM"}
+,
+{
+"DoctorName":"Doctor Rayden Morton",
+"SpawnLocation":"(29.0, 0.0, -1.0)",
+"CurrentNumberOfDoctors":3,
+"DoctorCost":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:03 PM"}
+,
+{
+"DoctorName":"Doctor Douglas Cross",
+"SpawnLocation":"(29.0, 0.0, -1.0)",
+"CurrentNumberOfDoctors":4,
+"DoctorCost":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:03 PM"}
+,
+{
+"DoctorName":"Doctor Eugene Potts",
+"SpawnLocation":"(29.0, 0.0, 0.0)",
+"CurrentNumberOfDoctors":5,
+"DoctorCost":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:36 PM"}
+,
+{
+"DoctorName":"Doctor Jaelynn Mathis",
+"SpawnLocation":"(29.0, 0.0, 0.0)",
+"CurrentNumberOfDoctors":6,
+"DoctorCost":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:58 PM"}
+,
+{
+"DoctorName":"Doctor Kaiden Peck",
+"SpawnLocation":"(29.0, 0.0, 0.0)",
+"CurrentNumberOfDoctors":7,
+"DoctorCost":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:09:01 PM"}
+,
+{
+"DoctorName":"Doctor Talon Branch",
+"SpawnLocation":"(30.0, 0.0, 0.0)",
+"CurrentNumberOfDoctors":8,
+"DoctorCost":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:10:03 PM"}
+,
+{
+"DoctorName":"Doctor Royal Saunders",
+"SpawnLocation":"(29.0, 0.0, 0.0)",
+"CurrentNumberOfDoctors":9,
+"DoctorCost":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:10:04 PM"}
+,
+{
+"DoctorName":"Doctor Jamari Allen",
+"SpawnLocation":"(29.0, 0.0, -1.0)",
+"CurrentNumberOfDoctors":10,
+"DoctorCost":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:12:49 PM"}
+,
+{
+"DoctorName":"Doctor Elian Kirkland",
+"SpawnLocation":"(30.0, 0.0, 0.0)",
+"CurrentNumberOfDoctors":11,
+"DoctorCost":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:13:41 PM"}
+,
+{
+"DoctorName":"Doctor Alma Howe",
+"SpawnLocation":"(29.0, 0.0, 0.0)",
+"CurrentNumberOfDoctors":12,
+"DoctorCost":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:13:41 PM"}
+]
+,
+"Event_MoneyDailyChange":[
+{
+"CurrentMoney":83150,
+"BeforeMoney":84000,
+"CurrentUpkeep":850,
+"UpkeepFromDoctors":0,
+"UpkeepFromRooms":850,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:04:59 PM"}
+,
+{
+"CurrentMoney":81550,
+"BeforeMoney":82650,
+"CurrentUpkeep":1100,
+"UpkeepFromDoctors":50,
+"UpkeepFromRooms":1050,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:06:45 PM"}
+,
+{
+"CurrentMoney":80050,
+"BeforeMoney":81250,
+"CurrentUpkeep":1200,
+"UpkeepFromDoctors":150,
+"UpkeepFromRooms":1050,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:08:09 PM"}
+,
+{
+"CurrentMoney":78475,
+"BeforeMoney":79850,
+"CurrentUpkeep":1375,
+"UpkeepFromDoctors":175,
+"UpkeepFromRooms":1200,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:09:40 PM"}
+,
+{
+"CurrentMoney":77050,
+"BeforeMoney":78475,
+"CurrentUpkeep":1425,
+"UpkeepFromDoctors":225,
+"UpkeepFromRooms":1200,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:10:59 PM"}
+,
+{
+"CurrentMoney":75725,
+"BeforeMoney":77150,
+"CurrentUpkeep":1425,
+"UpkeepFromDoctors":225,
+"UpkeepFromRooms":1200,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:12:19 PM"}
+,
+{
+"CurrentMoney":72225,
+"BeforeMoney":74425,
+"CurrentUpkeep":2200,
+"UpkeepFromDoctors":300,
+"UpkeepFromRooms":1900,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:14:10 PM"}
+]
+,
+"Event_PatientSetToWard":[
+{
+"PatientName":"Kyrie Kidd",
+"PatientHealth":100,
+"NumberOfKnownSymptoms":0,
+"NumberOfCuredSymptoms":0,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:04:40 PM"}
+,
+{
+"PatientName":"Gilbert Mills",
+"PatientHealth":94,
+"NumberOfKnownSymptoms":0,
+"NumberOfCuredSymptoms":0,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:04:54 PM"}
+,
+{
+"PatientName":"Marvin Spencer",
+"PatientHealth":97,
+"NumberOfKnownSymptoms":0,
+"NumberOfCuredSymptoms":0,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:05:02 PM"}
+,
+{
+"PatientName":"Scott McCaig",
+"PatientHealth":88,
+"NumberOfKnownSymptoms":0,
+"NumberOfCuredSymptoms":0,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:45 PM"}
+,
+{
+"PatientName":"Martha Stevenson",
+"PatientHealth":100,
+"NumberOfKnownSymptoms":0,
+"NumberOfCuredSymptoms":0,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:09:35 PM"}
+,
+{
+"PatientName":"Hank Olson",
+"PatientHealth":100,
+"NumberOfKnownSymptoms":0,
+"NumberOfCuredSymptoms":0,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:09:58 PM"}
+,
+{
+"PatientName":"Dwayne Faulkner",
+"PatientHealth":100,
+"NumberOfKnownSymptoms":0,
+"NumberOfCuredSymptoms":0,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:10:46 PM"}
+,
+{
+"PatientName":"Malcolm Scott",
+"PatientHealth":100,
+"NumberOfKnownSymptoms":0,
+"NumberOfCuredSymptoms":0,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:11:41 PM"}
+]
+,
+"Event_MoneyRemove":[
+{
+"CurrentMoney":84900,
+"MoneyBefore":85100,
+"MoneyRemoved":200,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:03:58 PM"}
+,
+{
+"CurrentMoney":84900,
+"MoneyBefore":85000,
+"MoneyRemoved":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:04:13 PM"}
+,
+{
+"CurrentMoney":83900,
+"MoneyBefore":84900,
+"MoneyRemoved":1000,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:04:32 PM"}
+,
+{
+"CurrentMoney":82750,
+"MoneyBefore":83150,
+"MoneyRemoved":400,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:05:27 PM"}
+,
+{
+"CurrentMoney":82650,
+"MoneyBefore":82750,
+"MoneyRemoved":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:05:33 PM"}
+,
+{
+"CurrentMoney":82550,
+"MoneyBefore":82650,
+"MoneyRemoved":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:05:34 PM"}
+,
+{
+"CurrentMoney":81450,
+"MoneyBefore":81550,
+"MoneyRemoved":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:03 PM"}
+,
+{
+"CurrentMoney":81350,
+"MoneyBefore":81450,
+"MoneyRemoved":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:03 PM"}
+,
+{
+"CurrentMoney":81250,
+"MoneyBefore":81350,
+"MoneyRemoved":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:36 PM"}
+,
+{
+"CurrentMoney":81250,
+"MoneyBefore":81350,
+"MoneyRemoved":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:58 PM"}
+,
+{
+"CurrentMoney":79850,
+"MoneyBefore":80050,
+"MoneyRemoved":200,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:08:25 PM"}
+,
+{
+"CurrentMoney":79750,
+"MoneyBefore":79850,
+"MoneyRemoved":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:09:01 PM"}
+,
+{
+"CurrentMoney":78475,
+"MoneyBefore":78575,
+"MoneyRemoved":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:10:03 PM"}
+,
+{
+"CurrentMoney":78375,
+"MoneyBefore":78475,
+"MoneyRemoved":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:10:04 PM"}
+,
+{
+"CurrentMoney":74825,
+"MoneyBefore":75825,
+"MoneyRemoved":1000,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:12:25 PM"}
+,
+{
+"CurrentMoney":74725,
+"MoneyBefore":74825,
+"MoneyRemoved":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:12:42 PM"}
+,
+{
+"CurrentMoney":74625,
+"MoneyBefore":74725,
+"MoneyRemoved":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:12:49 PM"}
+,
+{
+"CurrentMoney":74525,
+"MoneyBefore":74625,
+"MoneyRemoved":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:13:41 PM"}
+,
+{
+"CurrentMoney":74425,
+"MoneyBefore":74525,
+"MoneyRemoved":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:13:41 PM"}
+]
+,
+"Event_RoomBuildSelection":[
+{
+"RoomName":"Ward",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:03:54 PM"}
+,
+{
+"RoomName":"Examination",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:04:06 PM"}
+,
+{
+"RoomName":"Laboratory",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:04:22 PM"}
+,
+{
+"RoomName":"ICU",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:05:21 PM"}
+,
+{
+"RoomName":"Ward",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:08:18 PM"}
+,
+{
+"RoomName":"Laboratory",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:12:18 PM"}
+,
+{
+"RoomName":"Examination",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:12:39 PM"}
+]
+,
+"Event_PatientSpawn":[
+{
+"PatientName":"Gilbert Mills",
+"SpawnLocation":"(30.0, 0.0, -1.0)",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:03:43 PM"}
+,
+{
+"PatientName":"Marvin Spencer",
+"SpawnLocation":"(30.0, 0.0, -1.0)",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:04:06 PM"}
+,
+{
+"PatientName":"Kyrie Kidd",
+"SpawnLocation":"(30.0, 0.0, -1.0)",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:04:35 PM"}
+,
+{
+"PatientName":"Scott McCaig",
+"SpawnLocation":"(29.0, 0.0, 0.0)",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:05:42 PM"}
+,
+{
+"PatientName":"Alisha Alexander",
+"SpawnLocation":"(30.0, 0.0, -1.0)",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:51 PM"}
+,
+{
+"PatientName":"Martha Stevenson",
+"SpawnLocation":"(29.0, 0.0, -1.0)",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:09:28 PM"}
+,
+{
+"PatientName":"Hank Olson",
+"SpawnLocation":"(29.0, 0.0, 0.0)",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:09:49 PM"}
+,
+{
+"PatientName":"Dwayne Faulkner",
+"SpawnLocation":"(29.0, 0.0, -1.0)",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:10:42 PM"}
+,
+{
+"PatientName":"Malcolm Scott",
+"SpawnLocation":"(30.0, 0.0, 0.0)",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:11:35 PM"}
+,
+{
+"PatientName":"Harlee Roy",
+"SpawnLocation":"(29.0, 0.0, 0.0)",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:12:21 PM"}
+]
+,
+"Event_MoneyIncrease":[
+{
+"CurrentMoney":85100,
+"MoneyBefore":85000,
+"MoneyAdded":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:03:42 PM"}
+,
+{
+"CurrentMoney":85000,
+"MoneyBefore":84900,
+"MoneyAdded":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:04:06 PM"}
+,
+{
+"CurrentMoney":84000,
+"MoneyBefore":83900,
+"MoneyAdded":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:04:35 PM"}
+,
+{
+"CurrentMoney":82650,
+"MoneyBefore":82550,
+"MoneyAdded":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:05:42 PM"}
+,
+{
+"CurrentMoney":81350,
+"MoneyBefore":81250,
+"MoneyAdded":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:51 PM"}
+,
+{
+"CurrentMoney":79850,
+"MoneyBefore":79750,
+"MoneyAdded":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:09:28 PM"}
+,
+{
+"CurrentMoney":78575,
+"MoneyBefore":78475,
+"MoneyAdded":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:09:49 PM"}
+,
+{
+"CurrentMoney":78475,
+"MoneyBefore":78375,
+"MoneyAdded":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:10:42 PM"}
+,
+{
+"CurrentMoney":77150,
+"MoneyBefore":77050,
+"MoneyAdded":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:11:35 PM"}
+,
+{
+"CurrentMoney":75825,
+"MoneyBefore":75725,
+"MoneyAdded":100,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:12:21 PM"}
+]
+,
+"Event_RoomBuildPlaced":[
+{
+"RoomName":"Reception",
+"Position":"(30.0, 0.0, 0.0)",
+"Rotation":"(0.0, 0.0, 0.0)",
+"Cost":0,
+"Upkeep":0,
+"DoctorsNeed":0,
+"BuildTime":0,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:03:37 PM"}
+,
+{
+"RoomName":"Ward",
+"Position":"(30.0, 0.0, 30.0)",
+"Rotation":"(0.0, 0.0, 0.0)",
+"Cost":200,
+"Upkeep":150,
+"DoctorsNeed":2,
+"BuildTime":8,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:03:58 PM"}
+,
+{
+"RoomName":"Examination",
+"Position":"(30.0, 0.0, 45.0)",
+"Rotation":"(0.0, 0.0, 0.0)",
+"Cost":100,
+"Upkeep":200,
+"DoctorsNeed":2,
+"BuildTime":11,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:04:13 PM"}
+,
+{
+"RoomName":"Laboratory",
+"Position":"(15.0, 0.0, 30.0)",
+"Rotation":"(0.0, 180.0, 0.0)",
+"Cost":1000,
+"Upkeep":500,
+"DoctorsNeed":1,
+"BuildTime":10,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:04:32 PM"}
+,
+{
+"RoomName":"Intensive Care Unit",
+"Position":"(45.0, 0.0, 30.0)",
+"Rotation":"(0.0, 270.0, 0.0)",
+"Cost":400,
+"Upkeep":200,
+"DoctorsNeed":2,
+"BuildTime":15,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:05:27 PM"}
+,
+{
+"RoomName":"Ward",
+"Position":"(60.0, 0.0, 0.0)",
+"Rotation":"(0.0, 90.0, 0.0)",
+"Cost":200,
+"Upkeep":150,
+"DoctorsNeed":2,
+"BuildTime":8,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:08:25 PM"}
+,
+{
+"RoomName":"Laboratory",
+"Position":"(15.0, 0.0, 15.0)",
+"Rotation":"(0.0, 90.0, 0.0)",
+"Cost":1000,
+"Upkeep":500,
+"DoctorsNeed":1,
+"BuildTime":10,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:12:25 PM"}
+,
+{
+"RoomName":"Examination",
+"Position":"(45.0, 0.0, 15.0)",
+"Rotation":"(0.0, 0.0, 0.0)",
+"Cost":100,
+"Upkeep":200,
+"DoctorsNeed":2,
+"BuildTime":11,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:12:42 PM"}
+]
+,
+"Event_GameStateChange":[
+{
+"PreviousState":"ReceptionSetup",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:03:37 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:03:48 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:03:53 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:04:02 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:04:06 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:04:18 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:04:22 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:04:35 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:04:46 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:04:48 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:04:59 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:05:00 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:05:03 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:05:16 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:05:21 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:05:30 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:05:37 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:05:47 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:05:54 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:06:28 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:06:31 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:06:33 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:06:45 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:01 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:05 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:09 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:11 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:16 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:23 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:25 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:29 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:34 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:38 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:39 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:42 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:43 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:46 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:51 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:53 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:55 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:07:59 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:08:04 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:08:08 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:08:09 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:08:12 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:08:16 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:08:18 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:08:28 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:08:32 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:08:34 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:08:36 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:08:37 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:08:39 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:08:39 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:08:47 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:08:52 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:08:56 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:08:59 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:09:03 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:09:04 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:09:09 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:09:20 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:09:24 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:09:26 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:09:28 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:09:28 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:09:31 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:09:33 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:09:36 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:09:50 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:09:55 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:09:57 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:09:59 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:10:02 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:10:05 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:10:06 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:10:10 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:10:12 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:10:16 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:10:27 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:10:30 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:10:31 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:10:35 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:10:38 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:10:40 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:10:45 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:10:47 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:11:16 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:11:22 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:11:40 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:11:43 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:11:43 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:11:46 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:11:47 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:11:51 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:11:53 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:11:54 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:11:55 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:11:56 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:11:57 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:12:02 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:12:03 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:12:07 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:12:08 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:12:12 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:12:16 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:12:18 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:12:32 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:12:39 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:12:47 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:12:50 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:12:51 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:12:57 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:13:02 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:13:04 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:13:06 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:13:08 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:13:09 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:13:16 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:13:17 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:13:24 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:13:32 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:13:37 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:13:39 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:13:42 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:13:44 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:13:49 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:13:52 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:13:57 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:13:58 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:14:05 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:14:06 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:14:08 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:14:09 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:14:10 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:14:11 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:14:13 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:14:14 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:14:16 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:14:17 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:14:19 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:14:20 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:14:21 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:14:22 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:14:24 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:14:25 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:14:26 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:14:27 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:14:28 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:14:29 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:14:30 PM"}
+,
+{
+"PreviousState":"Playing",
+"CurrentState":"Paused",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:14:36 PM"}
+,
+{
+"PreviousState":"Paused",
+"CurrentState":"Playing",
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:14:38 PM"}
+]
+,
+"Event_RoomBuildComplete":[
+{
+"RoomName":"Reception",
+"Position":"(30.0, 0.0, 0.0)",
+"Rotation":"(0.0, 0.0, 0.0)",
+"Cost":0,
+"Upkeep":0,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:03:37 PM"}
+,
+{
+"RoomName":"Ward",
+"Position":"(30.0, 0.0, 30.0)",
+"Rotation":"(0.0, 0.0, 0.0)",
+"Cost":200,
+"Upkeep":150,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:04:10 PM"}
+,
+{
+"RoomName":"Examination Room",
+"Position":"(30.0, 0.0, 45.0)",
+"Rotation":"(0.0, 0.0, 0.0)",
+"Cost":100,
+"Upkeep":200,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:04:28 PM"}
+,
+{
+"RoomName":"Laboratory",
+"Position":"(15.0, 0.0, 30.0)",
+"Rotation":"(0.0, 180.0, 0.0)",
+"Cost":1000,
+"Upkeep":500,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:05:07 PM"}
+,
+{
+"RoomName":"Intensive Care Unit",
+"Position":"(45.0, 0.0, 30.0)",
+"Rotation":"(0.0, 270.0, 0.0)",
+"Cost":400,
+"Upkeep":200,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:05:55 PM"}
+,
+{
+"RoomName":"Ward",
+"Position":"(60.0, 0.0, 0.0)",
+"Rotation":"(0.0, 90.0, 0.0)",
+"Cost":200,
+"Upkeep":150,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:08:48 PM"}
+,
+{
+"RoomName":"Laboratory",
+"Position":"(15.0, 0.0, 15.0)",
+"Rotation":"(0.0, 90.0, 0.0)",
+"Cost":1000,
+"Upkeep":500,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:12:43 PM"}
+,
+{
+"RoomName":"Examination Room",
+"Position":"(45.0, 0.0, 15.0)",
+"Rotation":"(0.0, 0.0, 0.0)",
+"Cost":100,
+"Upkeep":200,
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:13:05 PM"}
+]
+,
+"Event_ApplicationStart":[
+{
+"SessionID":"0135P84C21M11090181M4",
+"UserID":"MC10815",
+"Time":"19/4/2018 04:03:11 PM"}
+]
+}

@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://d3js.org/d3.v3.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -25,6 +27,61 @@
     @media screen and (max-width: 767px) {
       .row.content {height: auto;}
     }
+
+    .arc text {
+      font: 10px sans-serif;
+      text-anchor: middle;
+    }
+
+    .arc path {
+      stroke: #fff;
+    }
+
+    svg {
+        width: 100%;
+        height: 100%;
+        position: center;
+    }
+
+    .toolTip {
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        position: absolute;
+        display: none;
+        width: auto;
+        height: auto;
+        background: none repeat scroll 0 0 white;
+        border: 0 none;
+        border-radius: 8px 8px 8px 8px;
+        box-shadow: -3px 3px 15px #888888;
+        color: black;
+        font: 12px sans-serif;
+        padding: 5px;
+        text-align: center;
+    }
+
+    text {
+        font: 10px sans-serif;
+        color: white;
+    }
+    text.value {
+        font-size: 80%;
+        fill: black;
+    }
+
+    .axisHorizontal path{
+        fill: none;
+    }
+
+    .axisHorizontal .tick line {
+        stroke-width: 1;
+        stroke: rgba(0, 0, 0, 0.2);
+    }
+
+    .bar {
+        fill: steelblue;
+        fill-opacity: .9;
+    }
+
   </style>
 </head>
 <body>
@@ -38,6 +95,7 @@
         <li><a href="#getdata" onclick="CombineAndSaveData()">Combine and Save Data</a></li>
         <li><a href="#organise" onclick="LoadAndOrganise()">Display Data</a></li>
         <li><a href="#first" onclick="SelectSpecificEventType()">Select Specific Event Type</a></li>
+        <li><a href="#graph" onclick="DrawBarGraph()">Create Bar Graph</a></li>
         <li><a href="#clear" onclick="ClearData()">Clear Data Display</a></li>
       </ul><br>
     </div>
@@ -46,13 +104,20 @@
     <div class="col-sm-9">
         <div class="well">
             <h4>Process {This Tool is still a prototype}</h4>
-            <p id="testDisplay"> </p>
+            <p id="processDisplay"> </p>
         </div>
 
+        <!--graph display -->
+        <div class = "row">
+
+        </div>
+        <!-- data display -->
       <div class="row">
         <div class="col-sm-7">
           <div class="well">
             <h4>Data Display</h4>
+            <div id="GraphDisplay">
+            </div>
             <p id="JSONDisplay"></p>
           </div>
         </div>
@@ -99,8 +164,12 @@
       -->
       </div>
 
-      <!-- unused row
-      <div class="row">
+      <!-- <div class="row">
+        <div class="col-sm-9">
+          <div class="well">
+          </div>
+        </div> -->
+        <!-- unused
         <div class="col-sm-4">
           <div class="well">
             <p>Text</p>
@@ -115,15 +184,8 @@
             <p>Text</p>
           </div>
         </div>
-        <div class="col-sm-4">
-          <div class="well">
-            <p>Text</p>
-            <p>Text</p>
-            <p>Text</p>
-          </div>
-        </div>
-      </div>
       -->
+      </div>
       <!-- unused row
       <div class="row">
         <div class="col-sm-8">
@@ -152,10 +214,11 @@
         url: 'GetCombinedDataForDisplayManipulation.php',
         success: function (response) {//response is value returned from php
             //document.getElementById("JSONDisplay").innerHTML = response; // output the response, filling the text box with all the json data
-            var testDisplayText = "Displaying data from './saved/combinedFile.json'<br/>";
-            testDisplayText += "<b>Select an event to see all data of that event type.</b><br/>";
-            document.getElementById("testDisplay").innerHTML = testDisplayText;
+            var processDisplayText = "Displaying data from './saved/combinedFile.json'<br/>";
+            processDisplayText += "<b>Select an event to see all data of that event type.</b><br/>";
+            document.getElementById("processDisplay").innerHTML = processDisplayText;
             document.getElementById("JSONDisplay").innerHTML = ""; // clear the json display
+            document.getElementById("GraphDisplay").innerHTML = ""; // clear the bar graph away if its showing
 
             // parse the responce so we can work with the json data
             var data = JSON.parse(response);
@@ -186,7 +249,7 @@
               // append the text to the button
               newButton.appendChild(newButtonText);
               // append the button to the list of buttons
-              document.getElementById("testDisplay").appendChild(newButton);
+              document.getElementById("processDisplay").appendChild(newButton);
 
               // add an event listener for clicking on the button to display the data for that event type
               newButton.addEventListener("click", function(){DisplayDataFromEvent(eventName);});
@@ -197,6 +260,8 @@
 
             function DisplayDataFromEvent(eventName){
               //var output = "Button Pressed: " + eventName; // test that the button that is pressed is working correctly, returning that it has been pressed and what button it
+              document.getElementById("GraphDisplay").innerHTML = ""; // clear any possible graphs that are being displayed
+              CreatePieChartForSpecificData(eventName); // create a pie chart for that event
 
               // fill out the display box with all the data for that event
               var output = "";
@@ -354,48 +419,305 @@
 
         },
         error: function(){
-          document.getElementById("testDisplay").innerHTML = "failed to retrieve data from './saved/combinedFile.json'<br/>";
+          document.getElementById("processDisplay").innerHTML = "failed to retrieve data from './saved/combinedFile.json'<br/>";
         }
     });
   }
 
   function CombineAndSaveData(){
+    ClearData();
     $.ajax({
         url: 'CombineAndSaveAllJSONFiles.php',
         success: function (response) {//response is value returned from php
             document.getElementById("JSONDisplay").innerHTML = response;
-            document.getElementById("testDisplay").innerHTML = "Combine and Save Complete<br/>";
+            document.getElementById("processDisplay").innerHTML = "Combine and Save Complete<br/>";
         },
         error: function(){
-          document.getElementById("testDisplay").innerHTML = "failed to Combine and Save Data<br/>";
+          document.getElementById("processDisplay").innerHTML = "failed to Combine and Save Data<br/>";
         }
     });
   }
 
   function LoadAndOrganise(){
+    ClearData();
     $.ajax({
         url: 'SortJSONForDisplay.php',
         success: function (response) {//response is value returned from php
             document.getElementById("JSONDisplay").innerHTML = response;
-            document.getElementById("testDisplay").innerHTML = "All data loaded and displayed<br/>"
+            document.getElementById("processDisplay").innerHTML = "All data loaded and displayed<br/>"
         },
         error: function(){
-          document.getElementById("testDisplay").innerHTML = "failed to load data from './saved/combinedFile.json'<br/>";
+          document.getElementById("processDisplay").innerHTML = "failed to load data from './saved/combinedFile.json'<br/>";
         }
     });
   }
 
   function ClearData(){
     document.getElementById("JSONDisplay").innerHTML = "";
-    document.getElementById("testDisplay").innerHTML = "data cleared";
+    document.getElementById("processDisplay").innerHTML = "data cleared";
     document.getElementById("SortButtons").innerHTML = "";
+    document.getElementById("GraphDisplay").innerHTML = "";
   }
 
   function ClearPage(){
     document.getElementById("JSONDisplay").innerHTML = "";
-    document.getElementById("testDisplay").innerHTML = "";
+    document.getElementById("processDisplay").innerHTML = "";
     document.getElementById("SortButtons").innerHTML = "";
+    document.getElementById("GraphDisplay").innerHTML = "";
   }
+
+  function DrawBarGraph(){
+
+    // clear the bar graph in case there is already one there
+    document.getElementById("GraphDisplay").innerHTML = "";
+    document.getElementById("SortButtons").innerHTML = "";
+
+    // just get the event tag and the number of events within the tag
+    $.ajax({
+        url: 'GetCombinedDataForDisplayManipulation.php',
+        success: function (response) {
+          // create an array to store the data needed for creating the bar graph
+          var jsonDataForDisplay = [];
+          // parse the json data returned by the php
+          var parsedJson = JSON.parse(response);
+          // loop through the parsed json and add the event names along with the count of that event to the display array
+          Object.keys(parsedJson).forEach(function(item,index)
+          {
+            // push the event name along with its number of events to a new array for creating an graph
+            jsonDataForDisplay.push({ EventName: item, EventCount: parsedJson[item].length});
+          });
+
+          // title the bar graph
+          var titleText = "Click an event and it will display a pie chart of what session these events are from<br/>";
+          document.getElementById("GraphDisplay").innerHTML = titleText;
+
+          var div = d3.select("#GraphDisplay").append("div").attr("class", "toolTip");
+
+          var axisMargin = 20,
+                  margin = 40,
+                  valueMargin = 4,
+                  width = parseInt(document.getElementById("GraphDisplay").offsetWidth, 10),
+                  height = parseInt(25*jsonDataForDisplay.length, 10),
+                  barHeight = (height-axisMargin-margin*2)* 0.4/jsonDataForDisplay.length,
+                  barPadding = (height-axisMargin-margin*2)*0.6/jsonDataForDisplay.length,
+                  jsonDataForDisplay, bar, svg, scale, xAxis, labelWidth = 0;
+
+          max = d3.max(jsonDataForDisplay, function(d) { return d.EventCount; });
+
+          svg = d3.select("#GraphDisplay")
+                  .append("svg")
+                  .attr("width", width)
+                  .attr("height", height);
+
+
+          bar = svg.selectAll("g")
+                  .data(jsonDataForDisplay)
+                  .enter()
+                  .append("g");
+
+          bar.attr("class", "bar")
+                  .attr("cx",0)
+                  .attr("transform", function(d, i) {
+                      return "translate(" + margin + "," + (i * (barHeight + barPadding) + barPadding) + ")";
+                  });
+
+          bar.append("text")
+                  .attr("class", "label")
+                  .attr("y", barHeight / 2)
+                  .attr("dy", ".35em") //vertical align middle
+                  .text(function(d){
+                      return d.EventName;
+                  }).each(function() {
+              labelWidth = Math.ceil(Math.max(labelWidth, this.getBBox().width));
+          });
+
+          scale = d3.scale.linear()
+                  .domain([0, max])
+                  .range([0, width - margin*2 - labelWidth]);
+
+          xAxis = d3.svg.axis()
+                  .scale(scale)
+                  .tickSize(-height + 2*margin + axisMargin)
+                  .orient("bottom");
+
+          bar.append("rect")
+                  .attr("transform", "translate("+labelWidth+", 0)")
+                  .attr("height", barHeight)
+                  .attr("width", function(d){
+                      return scale(d.EventCount);
+                  });
+
+          bar.append("text")
+                  .attr("class", "value")
+                  .attr("y", barHeight / 2)
+                  .attr("dx", -valueMargin + labelWidth) //margin right
+                  .attr("dy", ".35em") //vertical align middle
+                  .attr("text-anchor", "end")
+                  .text(function(d){
+                      return (d.EventCount);
+                  })
+                  .attr("x", function(d){
+                      var width = this.getBBox().width;
+                      return Math.max(width + valueMargin, scale(d.EventCount));
+                  });
+
+
+
+                  // mouse is over a bar
+          bar.on("mousemove", function(d){
+
+                      div.style("left", 20 +"px");
+                      div.style("top", 10 + "px");
+                      div.style("display", "inline-block");
+                      div.html((d.EventName)+"<br>"+"EventCount: "+(d.EventCount));
+
+                  });
+
+                  // mouse leaves a bar
+          bar.on("mouseout", function(d){
+                      div.style("display", "none");
+                  });
+
+                  // mouse clicks a bar
+          bar.on("click", function(d){
+                      var outputText = "Bar clicked: " + d.EventName + "<br/>";
+                      document.getElementById("processDisplay").innerHTML = outputText;
+                      CreatePieChartForSpecificData(d.EventName); // create a pie chart for that event
+                  });
+
+          svg.insert("g",":first-child")
+                  .attr("class", "axisHorizontal")
+                  .attr("transform", "translate(" + (margin + labelWidth) + ","+ (height - axisMargin - margin)+")")
+                  .call(xAxis);
+
+        }, // end of success
+        error: function(){
+          document.getElementById("processDisplay").innerHTML = "failed to load data from './saved/combinedFile.json'<br/>";
+        } // end of error
+      });
+  }
+
+  function CreatePieChartForSpecificData(SpecificEventName){
+
+        // clear the data incase there was anything there before
+        document.getElementById("GraphDisplay").innerHTML = "";
+
+    $.ajax({
+        url: 'GetCombinedDataForDisplayManipulation.php',
+        success: function (response) {
+
+          // set up an array for all the data that will be used for creating a pie chart
+          var chartData = [];
+          // parse the responce json data
+          var parsedJson = JSON.parse(response);
+
+          // get the data for the specific data that this is for
+          var specificEventData = parsedJson[SpecificEventName];
+
+          // loop through each of the data entries inside the specific event data
+          specificEventData.forEach(function(item,value){
+          // create an object for this item, to be added onto the Array
+          var checkObject = {SessionIdentification: item.SessionID, SessionCount:1};
+
+          // check if the array is empty to begin with
+          // if empty push the first event onto the Array
+          if (chartData.length === 0) {
+            chartData.push(checkObject);
+          }
+
+          // loop through all the data in chart data to find if it has a session id the same as this
+          // if its in the data return true, if its not return false
+          // also return the position in the array it is at
+          function checkForSessionID(){
+            var found = [false, 0];
+            for (var i = 0; i < chartData.length; i++) {
+              if (chartData[i].SessionIdentification == item.SessionID) {
+                found = [true, i];
+                break;
+              }
+            }
+            return found;
+          }
+
+          var sessionInArray = checkForSessionID();
+          // check if the value was in the data, if it wasnt then add it to the data
+          // sessionInArray[0] is the bool for if the data was found
+          if (!sessionInArray[0]) {
+            // not in the chart data so add it to the data Array
+            // { EventName: item, EventCount: parsedJson[item].length}
+            // create an json object and push it to the array
+            chartData.push(checkObject);
+          }
+          // if it was then increase the count for that data
+          else {
+            // sessionInArray[1] is the position in the chartdata array that the value needing adjusted is
+            // increase the session count by 1
+            chartData[sessionInArray[1]].SessionCount++;
+          }
+        });
+
+        var titleText = "Pie Chart for: " + SpecificEventName +"       (<i>There may be data displayed below this</i>)"+ "<br/>";
+        // title the Graph
+        document.getElementById("GraphDisplay").innerHTML = titleText;
+
+          // draw pie graph
+          var w = document.getElementById("GraphDisplay").offsetWidth / 1.5;
+          var h = document.getElementById("GraphDisplay").offsetWidth / 1.5;
+          var r = w/2; // using the width since it changes with the size of the window
+
+          var colour = d3.scale.category20(); // will give us colours from d3s scale library
+
+          var vis = d3.select('#GraphDisplay').append("svg:svg").data([chartData]).attr("width", w).attr("height", h).append("svg:g").attr("transform", "translate(" + r + "," + r + ")");
+          var div = d3.select("#GraphDisplay").append("div").attr("class", "toolTip");
+          var pie = d3.layout.pie().value(function(d){return d.SessionCount;});
+
+
+          // Declare an arc generator function
+          var arc = d3.svg.arc().outerRadius(r);
+
+          // Select paths, use arc generator to draw
+          var arcs = vis.selectAll("g.slice").data(pie).enter().append("svg:g").attr("class", "slice");
+          arcs.append("svg:path")
+              .attr("fill", function(d, i){return colour(i);})
+              .attr("d", function (d) {return arc(d);})
+              .text(function(d){return d.value;});
+          ;
+
+          // Add the text
+          arcs.append("svg:text")
+              .attr("transform", function(d){
+                  d.innerRadius = 100; /* Distance of label to the center*/
+                  d.outerRadius = r;
+                  return "translate(" + arc.centroid(d) + ")";}
+              )
+              .attr("text-anchor", "middle")
+              .text( function(d, i) {return chartData[i].SessionCount;});
+
+              // mouse is over a bar
+              arcs.on("mousemove", function(d){
+
+                  div.style("left", 20 +"px");
+                  div.style("top", 10 + "px");
+                  div.style("display", "inline-block");
+                  div.html("Session ID: "+(d.data.SessionIdentification)+"<br>"+"Number of events from that session: "+(d.data.SessionCount));
+
+              });
+
+              // mouse leaves a bar
+              arcs.on("mouseout", function(d){
+                  div.style("display", "none");
+              });
+
+
+
+        }, // end of success
+        error: function()
+        {
+
+        }
+      }); // end of ajax
+  }
+
 
 </script>
 

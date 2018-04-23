@@ -103,7 +103,10 @@
     <div class="col-sm-9">
         <div class="well">
             <h4>Process {This Tool is still a prototype}</h4>
-            <p id="processDisplay"> </p>
+            <p id="processDisplay">
+              To Use this tool make sure there is JSON files inside the ./data/ folder. <br/>
+              To collect this data a tool created by my self is available at <a href="https://www.w3schools.com/html/">"LINK HERE"</a>
+            </p>
         </div>
 
         <!--graph display -->
@@ -263,7 +266,7 @@
               for (var i = 0; i < eventData.length; i++) {
 
                 // output the entry number
-                output += "<i>" + "Entry " + i + "</i><br/>";
+                output += "<b><i>" + "Entry " + i + "</i></b><br/>";
 
                 // loop through all the event keys and output the data for them
                 for (var j = 0; j < eventKeys.length; j++) {
@@ -424,7 +427,7 @@
 
               // create a new button
               var newButton = document.createElement("BUTTON");
-              var newButtonText = document.createTextNode("CreateABarGraph");
+              var newButtonText = document.createTextNode("Create A Bar Graph");
 
               // give the button an id incase we need to access via id at any point
               newButton.id = "BarGraph"+"_button";
@@ -637,8 +640,6 @@
           // sessionInArray[0] is the bool for if the data was found
           else if (!sessionInArray[0]) {
             // not in the chart data so add it to the data Array
-            // { EventName: item, EventCount: parsedJson[item].length}
-            // create an json object and push it to the array
             chartData.push(checkObject);
           }
           // if it was then increase the count for that data
@@ -655,7 +656,7 @@
 
           // draw pie graph
           var w = document.getElementById("GraphDisplay").offsetWidth;
-          var h = document.getElementById("GraphDisplay").offsetWidth / 1.2;
+          var h = document.getElementById("GraphDisplay").offsetWidth / 1.4;
           var r = h/2; // using the width since it changes with the size of the window
 
           var colour = d3.scale.category20(); // will give us colours from d3s scale library
@@ -679,7 +680,7 @@
           // Add the text
           arcs.append("svg:text")
               .attr("transform", function(d){
-                  d.innerRadius = 100; /* Distance of label to the center*/
+                  d.innerRadius = 80; /* Distance of label to the center*/
                   d.outerRadius = r;
                   return "translate(" + arc.centroid(d) + ")";}
               )

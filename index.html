@@ -92,10 +92,9 @@
       <h2>CS Analytics</h2>
       <ul class="nav nav-pills nav-stacked">
         <li class="active"><a href="#home" onclick="ClearPage()">All JSON Info Output</a></li>
-        <li><a href="#getdata" onclick="CombineAndSaveData()">Combine and Save Data</a></li>
-        <li><a href="#organise" onclick="LoadAndOrganise()">Display Data</a></li>
-        <li><a href="#first" onclick="SelectSpecificEventType()">Select Specific Event Type</a></li>
-        <li><a href="#graph" onclick="DrawBarGraph()">Create Bar Graph</a></li>
+        <li><a href="#getdata" onclick="CombineAndSaveData()">Combine and Save All JSON Data</a></li>
+        <li><a href="#specific" onclick="CreateButtonsForAllSessions()">Open Specific File</a></li>
+        <li><a href="#graph" onclick="CreateButtonsForBarGraphSelect()">Create Bar Graph</a></li>
         <li><a href="#clear" onclick="ClearData()">Clear Data Display</a></li>
       </ul><br>
     </div>
@@ -140,67 +139,19 @@
             $.ajax({
                 url: 'getJSONFilePaths.php',
                 success: function (response) {//response is value returned from php
-                    document.getElementById("JSONPaths").innerHTML = response;
+                  var textDisplay = "<b>All json files in directory './data/'</b><br/>";
+                  var jsonData = JSON.parse(response);
+                  jsonData.forEach(function(item, value){
+                    textDisplay += item.FilePath + "<br/>";
+                  });
+                  document.getElementById("JSONPaths").innerHTML = textDisplay;
                 }
             });
             </script>
           </div>
         </div>
-
-
-        <!-- unused boxes
-        <div class="col-sm-3">
-          <div class="well">
-            <h4>Sessions</h4>
-            <p>10 Million</p>
-          </div>
-        </div>
-        <div class="col-sm-3">
-          <div class="well">
-            <h4>Bounce</h4>
-            <p>30%</p>
-          </div>
-        </div>
-      -->
       </div>
-
-      <!-- <div class="row">
-        <div class="col-sm-9">
-          <div class="well">
-          </div>
-        </div> -->
-        <!-- unused
-        <div class="col-sm-4">
-          <div class="well">
-            <p>Text</p>
-            <p>Text</p>
-            <p>Text</p>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="well">
-            <p>Text</p>
-            <p>Text</p>
-            <p>Text</p>
-          </div>
-        </div>
-      -->
       </div>
-      <!-- unused row
-      <div class="row">
-        <div class="col-sm-8">
-          <div class="well">
-            <p>Text</p>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="well">
-            <p>Text</p>
-          </div>
-        </div>
-      </div>
-      -->
-
     </div>
   </div>
 </div>
@@ -209,12 +160,14 @@
 
 <script>
 
-  function SelectSpecificEventType(){
+  function SelectSpecificEventType(PassedFilePath){
     $.ajax({
-        url: 'GetCombinedDataForDisplayManipulation.php',
+        url: 'GetJSONDataFromFile.php',
+        method: "GET",
+        data: {PassedFilePath: PassedFilePath},
         success: function (response) {//response is value returned from php
             //document.getElementById("JSONDisplay").innerHTML = response; // output the response, filling the text box with all the json data
-            var processDisplayText = "Displaying data from './saved/combinedFile.json'<br/>";
+            var processDisplayText = "Displaying data from file" + PassedFilePath+"<br/>";
             processDisplayText += "<b>Select an event to see all data of that event type.</b><br/>";
             document.getElementById("processDisplay").innerHTML = processDisplayText;
             document.getElementById("JSONDisplay").innerHTML = ""; // clear the json display
@@ -438,35 +391,63 @@
     });
   }
 
-  function LoadAndOrganise(){
+  function LoadAndOrganise(PassedFilePath){
     ClearData();
+
     $.ajax({
         url: 'SortJSONForDisplay.php',
+        method: "GET",
+        data: {PassedFilePath: PassedFilePath},
         success: function (response) {//response is value returned from php
             document.getElementById("JSONDisplay").innerHTML = response;
-            document.getElementById("processDisplay").innerHTML = "All data loaded and displayed<br/>"
+            document.getElementById("processDisplay").innerHTML = "All data loaded inside file: " +PassedFilePath +" and displayed<br/>"
+
+
+            function CreateAButtonToAllowSelectingSpecificEvents(){
+
+              // create a new button
+              var newButton = document.createElement("BUTTON");
+              var newButtonText = document.createTextNode("Select Specific Event");
+
+              // give the button an id incase we need to access via id at any point
+              newButton.id = "SpecificEvent"+"_button";
+              // append the text to the button
+              newButton.appendChild(newButtonText);
+              // append the button to the list of buttons
+              document.getElementById("processDisplay").appendChild(newButton);
+
+              // add an event listener for clicking on the button
+              newButton.addEventListener("click", function(){SelectSpecificEventType(PassedFilePath)});
+            }
+
+            function CreateAButtonToDrawABarGraph(){
+
+              // create a new button
+              var newButton = document.createElement("BUTTON");
+              var newButtonText = document.createTextNode("CreateABarGraph");
+
+              // give the button an id incase we need to access via id at any point
+              newButton.id = "BarGraph"+"_button";
+              // append the text to the button
+              newButton.appendChild(newButtonText);
+              // append the button to the list of buttons
+              document.getElementById("processDisplay").appendChild(newButton);
+
+              // add an event listener for clicking on the button
+              newButton.addEventListener("click", function(){DrawBarGraph(PassedFilePath)});
+            }
+
+            CreateAButtonToAllowSelectingSpecificEvents();
+            CreateAButtonToDrawABarGraph();
+
         },
         error: function(){
-          document.getElementById("processDisplay").innerHTML = "failed to load data from './saved/combinedFile.json'<br/>";
+          document.getElementById("processDisplay").innerHTML = "failed to load data from "+ PassedFilePath+"<br/>";
         }
     });
   }
 
-  function ClearData(){
-    document.getElementById("JSONDisplay").innerHTML = "";
-    document.getElementById("processDisplay").innerHTML = "data cleared";
-    document.getElementById("SortButtons").innerHTML = "";
-    document.getElementById("GraphDisplay").innerHTML = "";
-  }
-
-  function ClearPage(){
-    document.getElementById("JSONDisplay").innerHTML = "";
-    document.getElementById("processDisplay").innerHTML = "";
-    document.getElementById("SortButtons").innerHTML = "";
-    document.getElementById("GraphDisplay").innerHTML = "";
-  }
-
-  function DrawBarGraph(){
+  function DrawBarGraph(PassedFilePath){
 
     // clear the bar graph in case there is already one there
     document.getElementById("GraphDisplay").innerHTML = "";
@@ -474,7 +455,9 @@
 
     // just get the event tag and the number of events within the tag
     $.ajax({
-        url: 'GetCombinedDataForDisplayManipulation.php',
+        url: 'GetJSONDataFromFile.php',
+        method: "GET",
+        data: {PassedFilePath: PassedFilePath},
         success: function (response) {
           // create an array to store the data needed for creating the bar graph
           var jsonDataForDisplay = [];
@@ -488,7 +471,7 @@
           });
 
           // title the bar graph
-          var titleText = "Click an event and it will display a pie chart of what session these events are from<br/>";
+          var titleText = "Click an event and it will a pie chart of all the sessions count of that event<br/>";
           document.getElementById("GraphDisplay").innerHTML = titleText;
 
           var div = d3.select("#GraphDisplay").append("div").attr("class", "toolTip");
@@ -601,9 +584,12 @@
 
         // clear the data incase there was anything there before
         document.getElementById("GraphDisplay").innerHTML = "";
+        document.getElementById("JSONDisplay").innerHTML = "";
 
     $.ajax({
-        url: 'GetCombinedDataForDisplayManipulation.php',
+      url: 'GetJSONDataFromFile.php',
+      method: "GET",
+      data: {PassedFilePath: "./saved/combinedFile.json"},
         success: function (response) {
 
           // set up an array for all the data that will be used for creating a pie chart
@@ -619,11 +605,7 @@
           // create an object for this item, to be added onto the Array
           var checkObject = {SessionIdentification: item.SessionID, SessionCount:1};
 
-          // check if the array is empty to begin with
-          // if empty push the first event onto the Array
-          if (chartData.length === 0) {
-            chartData.push(checkObject);
-          }
+
 
           // loop through all the data in chart data to find if it has a session id the same as this
           // if its in the data return true, if its not return false
@@ -639,10 +621,21 @@
             return found;
           }
 
-          var sessionInArray = checkForSessionID();
+          // check if the session exists
+          // if the chart data length is greater than 0 then we have array data to check otherwise it will throw an error
+          if (chartData.length > 0) {
+            var sessionInArray = checkForSessionID();
+          }
+
+
+          // check if the array is empty to begin with
+          // if empty push the first event onto the Array
+          if (chartData.length === 0) {
+            chartData.push(checkObject);
+          }
           // check if the value was in the data, if it wasnt then add it to the data
           // sessionInArray[0] is the bool for if the data was found
-          if (!sessionInArray[0]) {
+          else if (!sessionInArray[0]) {
             // not in the chart data so add it to the data Array
             // { EventName: item, EventCount: parsedJson[item].length}
             // create an json object and push it to the array
@@ -656,7 +649,7 @@
           }
         });
 
-        var titleText = "Pie Chart for: " + SpecificEventName +"       (<i>There may be data displayed below this</i>)"+ "<br/>";
+        var titleText = "Pie Chart for: " + SpecificEventName +" Showing all events in all sessions "+"<br/>" +"(<i>There may be data displayed below this</i>)"+ "<br/>" + "<b>Clicking a section will load all the data for that section</b>"+"<br/>";
         // title the Graph
         document.getElementById("GraphDisplay").innerHTML = titleText;
 
@@ -693,7 +686,7 @@
               .attr("text-anchor", "middle")
               .text( function(d, i) {return chartData[i].SessionCount;});
 
-              // mouse is over a bar
+              // mouse is over a arc
               arcs.on("mousemove", function(d){
 
                   div.style("left", 20 +"px");
@@ -703,19 +696,110 @@
 
               });
 
-              // mouse leaves a bar
+              // mouse leaves a arc
               arcs.on("mouseout", function(d){
                   div.style("display", "none");
               });
 
+              arcs.on("click", function(d){
+                          var outputText = "Section clicked for session: " + d.data.SessionIdentification + "<br/>";
+                          document.getElementById("processDisplay").innerHTML = outputText;
+                          LoadAndOrganise("./data/Session_"+d.data.SessionIdentification+".json"); // create a pie chart for that event
+                      });
+
 
 
         }, // end of success
-        error: function()
-        {
-
-        }
       }); // end of ajax
+  }
+
+  function CreateButtonsForAllSessions(){
+
+    document.getElementById("processDisplay").innerHTML = "Select a file to display only the data inside that file<br/>"; // clear anything in the process display
+
+    // get the json paths
+    $.ajax({
+        url: 'getJSONFilePaths.php',
+        success: function (response) {//response is value returned from
+
+          // parse the json data for the file paths
+          var jsonData = JSON.parse(response);
+          // for each of the file paths create a button that will open that files data
+          jsonData.forEach(function(item, value){
+            CreateAButtonToOpenSpecificSessionFile(item.FilePath);
+          });
+
+          function CreateAButtonToOpenSpecificSessionFile(FilePath){
+            // create a new button
+            var newButton = document.createElement("BUTTON");
+            var newButtonText = document.createTextNode(FilePath);
+
+            // give the button an id incase we need to access via id at any point
+            newButton.id = FilePath+"_button";
+            // append the text to the button
+            newButton.appendChild(newButtonText);
+            // append the button to the list of buttons
+            document.getElementById("processDisplay").appendChild(newButton);
+
+            // add an event listener for clicking on the button
+            newButton.addEventListener("click", function(){LoadAndOrganise(FilePath)});
+
+          }
+        }
+    });
+
+
+  }
+
+  function CreateButtonsForBarGraphSelect(){
+
+    document.getElementById("processDisplay").innerHTML = "Select a file to display all the data as a bar graph file<br/>"; // clear anything in the process display
+
+    // get the json paths
+    $.ajax({
+        url: 'getJSONFilePaths.php',
+        success: function (response) {//response is value returned from
+
+          // parse the json data for the file paths
+          var jsonData = JSON.parse(response);
+          // for each of the file paths create a button that will open that files data
+          jsonData.forEach(function(item, value){
+            CreateAButtonToOpenSpecificSessionFile(item.FilePath);
+          });
+
+          function CreateAButtonToOpenSpecificSessionFile(FilePath){
+            // create a new button
+            var newButton = document.createElement("BUTTON");
+            var newButtonText = document.createTextNode(FilePath);
+
+            // give the button an id incase we need to access via id at any point
+            newButton.id = FilePath+"_button";
+            // append the text to the button
+            newButton.appendChild(newButtonText);
+            // append the button to the list of buttons
+            document.getElementById("processDisplay").appendChild(newButton);
+
+            // add an event listener for clicking on the button
+            newButton.addEventListener("click", function(){DrawBarGraph(FilePath)});
+
+          }
+        }// end of success
+
+    });
+  }
+
+  function ClearData(){
+    document.getElementById("JSONDisplay").innerHTML = "";
+    document.getElementById("processDisplay").innerHTML = "data cleared";
+    document.getElementById("SortButtons").innerHTML = "";
+    document.getElementById("GraphDisplay").innerHTML = "";
+  }
+
+  function ClearPage(){
+    document.getElementById("JSONDisplay").innerHTML = "";
+    document.getElementById("processDisplay").innerHTML = "";
+    document.getElementById("SortButtons").innerHTML = "";
+    document.getElementById("GraphDisplay").innerHTML = "";
   }
 
 

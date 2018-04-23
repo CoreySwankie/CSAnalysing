@@ -1,8 +1,14 @@
 <?php
-ini_set('memory_limit', '4000M');
+
+// get the file from the ajax call
+if (isset($_GET['PassedFilePath'])) {
+  $filePath = $_GET['PassedFilePath'];
+}
+else {
+  echo "data not found";
+}
 
 // open the file
-$filePath = "./saved/" . "combinedFile.json";
 $openFile = file_get_contents("$filePath");
 // make sure the file has been opened properly
 if ($openFile === false) {

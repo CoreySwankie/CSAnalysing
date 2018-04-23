@@ -13,9 +13,7 @@ foreach ($jsonFilePaths as $arrayPos => $filePath) {
 
   // get the file contents of the specified path
   $jsonFileContents = file_get_contents($filePath);
-  // // check how big the file is
-  // $jsonFileSize = strlen($jsonFileContents);
-  // echo "$jsonFileSize<br/>";
+
   // decode the jsonfile
   $jsonFile = json_decode($jsonFileContents, true);
 
@@ -26,16 +24,8 @@ foreach ($jsonFilePaths as $arrayPos => $filePath) {
 // set up iterator for the jsonfiles array
 $jsonIterator = new RecursiveIteratorIterator( new RecursiveArrayIterator($jsonFiles), RecursiveIteratorIterator::SELF_FIRST);
 
-
-// get all the event names in all the files loaded
-//echo "<b>Start getting event names</b> <br/>";  // test echo output
-// foreach json entry, $key is the json value name, $value is the value for that name
-// store the json array names in an array
-//$eventNames = SplFixedArray($jsonFileSize);
-
 foreach ($jsonIterator as $key => $value){
-  //echo "looping again!<br/>"; // test that it is going through the array values
-    // check if the value is an array
+      // check if the value is an array
     if(is_array($value)) {
       // check if already in the event names array, if not add it
       if (!in_array($key, $eventNames, true)) {
@@ -46,9 +36,6 @@ foreach ($jsonIterator as $key => $value){
       }
     }
 }
-//echo "<b>Finished getting event names</b> <br/><br/>";  // test echo output
-
-//echo "<b>Start searching for event type</b> <br/>";  // test echo output
 
 function ReturnFoundKey($keyLookingFor, $arraySearching, $loopNum)
 {
@@ -104,7 +91,6 @@ foreach ($jsonIterator as $key => $value) {
     }
   }
 }
-//echo "<b>Finished searching for event type</b> <br/><br/>";   // test echo output
 
 // encode the array to json before sending to the page
 echo "<b>All json files combined and saved to ./saved/combinedFile.json</b> <br/>";
@@ -112,7 +98,7 @@ echo "<b>Displaying data saved to combinedFile.json</b> <br/>";
 $exportJson = json_encode($endArray);
 echo $exportJson;
 
-// save out the file test
+// save out the file
 $filePath = "./saved/" . "combinedFile.json";
 $saveFile = fopen("$filePath", "w");
 $txt = $exportJson;

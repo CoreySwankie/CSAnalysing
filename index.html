@@ -563,7 +563,7 @@
 
                   // mouse clicks a bar
           bar.on("click", function(d){
-                      var outputText = "Bar clicked: " + d.EventName + "<br/>";
+                      var outputText = "Bar clicked: " + d.EventName + "<br/>" + "<b>If nothing is showing, select 'Combine and Save all JSON Data' and try again</b><br/>";
                       document.getElementById("processDisplay").innerHTML = outputText;
                       CreatePieChartForSpecificData(d.EventName); // create a pie chart for that event
                   });
@@ -710,6 +710,9 @@
 
 
         }, // end of success
+        error: function(){
+          document.getElementById("processDisplay").innerHTML = "Failed to find ./saved/combinedFile.json";
+        }
       }); // end of ajax
   }
 
